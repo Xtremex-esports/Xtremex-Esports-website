@@ -120,9 +120,105 @@
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
+    .story-grid {
+      margin-top: 34px;
+      display: grid;
+      gap: 18px;
+      text-align: left;
+    }
+    .story-card {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 22px 20px;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
+    }
+    .story-card h2 {
+      margin: 0 0 10px;
+      font-family: "Orbitron", sans-serif;
+      font-size: 1.08rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .story-card p {
+      width: 100%;
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.78;
+    }
+    .timeline {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .timeline li {
+      border-left: 2px solid rgba(243, 196, 109, 0.5);
+      padding-left: 16px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .timeline-title {
+      color: var(--text);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .coach-card {
+      border-color: rgba(243, 196, 109, 0.22);
+      background: linear-gradient(180deg, rgba(243, 196, 109, 0.08), rgba(255, 255, 255, 0.03));
+    }
+    .coach-card p strong {
+      color: #f7d691;
+    }
+    .roster-grid {
+      display: grid;
+      gap: 12px;
+    }
+    .roster-row {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 14px;
+      align-items: start;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 14px;
+      background: rgba(6, 10, 27, 0.32);
+    }
+    .roster-no {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text);
+      font-family: "Orbitron", sans-serif;
+      font-size: 0.95rem;
+    }
+    .roster-copy strong,
+    .roster-copy span {
+      display: block;
+    }
+    .roster-copy strong {
+      font-size: 0.98rem;
+      color: var(--text);
+    }
+    .roster-copy span {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
     @media (max-width: 640px) {
       .emblem img {
         padding: 30px;
+      }
+      .story-card {
+        padding: 18px 16px;
+      }
+      .roster-row {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -143,9 +239,127 @@
     </div>
     <div class="scene-note">Interactive 3D GPOW Elite badge</div>
     <p>
-      This page is ready to expand with roster, results, highlights, and match content when the MLBB sector
-      details are ready.
+      GPOW Elite's rise came out of setbacks, rebuilding, and a stronger reset that finally gave the MLBB side
+      a real foundation to grow from.
     </p>
+
+    <section class="story-grid">
+      <article class="story-card">
+        <h2>Formation</h2>
+        <p>
+          XTremeX MLBB, also known as GPOW Elite, was formally formed on <strong>January 4, 2026</strong>.
+          The division had already lived through earlier qualifier attempts from 2024, but the team chose that
+          January 2026 reset as the point where the MLBB side truly became structured again.
+        </p>
+      </article>
+
+      <article class="story-card">
+        <h2>The Story So Far</h2>
+        <ul class="timeline">
+          <li>
+            <span class="timeline-title">2024</span>
+            The MLBB side had already begun appearing in qualifiers by 2024, but that first stretch was anything
+            but smooth. It was a difficult period marked by painful setbacks, failed runs, roster instability, and
+            the frustration of watching progress break down just when the team needed momentum most. Players came
+            in, played under the banner, and later left. There were also sabotage-related problems that made the
+            journey even harder. Instead of building cleanly from one qualifier to the next, the team kept getting
+            pulled backward, and the MLBB side remained unstable for a long time.
+          </li>
+          <li>
+            <span class="timeline-title">Rebuild Phase</span>
+            After enduring all those setbacks, the team made the decision to start fresh instead of forcing the old
+            cycle to continue. That reset began with <strong>Gogo</strong> and <strong>Leroy</strong>, who became the
+            foundation of the new direction. From there, the MLBB side did not grow overnight, but it began to
+            expand with more intention, more seriousness, and a clearer sense of identity. This phase was about
+            rebuilding trust, rebuilding structure, and giving the sector a better base to grow from after a rough
+            and discouraging beginning.
+          </li>
+          <li>
+            <span class="timeline-title">January 2026</span>
+            January 2026 became the real turning point. The recruitment of <strong>Gogo</strong>,
+            <strong>Sunless</strong>, <strong>AlreadyPro</strong>, <strong>Igris</strong>, and
+            <strong>Zuman</strong> marked the moment the rise truly began. That intake gave the team stronger
+            balance, better energy, and a more serious competitive outlook. It was no longer just a side trying to
+            recover from the past. This was the point where GPOW Elite started becoming something more organized,
+            more ambitious, and more capable of building a lasting presence.
+          </li>
+          <li>
+            <span class="timeline-title">Early Team Growth</span>
+            Even after the team was formally formed, the MLBB side was still quite unpolished. Synergy was poor,
+            coordination was inconsistent, and the roster was still learning how to function as a real unit.
+            But through extra training, steady effort, and the guidance of <strong>Coach Edmund Bamfo</strong>,
+            the team improved drastically. What began as a rough and uneven side started becoming more disciplined,
+            more connected, and much more dangerous in competition.
+          </li>
+          <li>
+            <span class="timeline-title">Breakthrough Results</span>
+            That improvement translated into real results. GPOW Elite went on to place <strong>second</strong>
+            in the <strong>EAG National Qualifiers for Ghana</strong>, a major sign of how far the squad had come
+            from its unstable early phase. On top of that, <strong>three of the team's players</strong> earned
+            places in the <strong>Ghana National Team</strong>, showing that the project was not only growing as
+            a unit, but also producing players capable of reaching the national level.
+          </li>
+        </ul>
+      </article>
+
+      <article class="story-card coach-card">
+        <h2>Coach</h2>
+        <p>
+          Through the chaos, the resets, and the difficult years, <strong>Coach Edmund Bamfo</strong> remained the
+          steady hand behind the MLBB side. He stayed through the ups and downs, kept belief in the squad, and
+          provided the structure that helped the team rebuild with purpose. His leadership has been one of the
+          clearest reasons the rise of GPOW Elite became possible.
+        </p>
+      </article>
+
+      <article class="story-card">
+        <h2>Current Roster Briefing</h2>
+        <div class="roster-grid">
+          <div class="roster-row">
+            <div class="roster-no">01</div>
+            <div class="roster-copy">
+              <strong>Bright Bosu Appiah</strong>
+              <span>Gamer tag: AlreadyPro</span>
+            </div>
+          </div>
+          <div class="roster-row">
+            <div class="roster-no">02</div>
+            <div class="roster-copy">
+              <strong>Aaron Gogo Ashirifi</strong>
+              <span>Gamer tag: Gogo</span>
+            </div>
+          </div>
+          <div class="roster-row">
+            <div class="roster-no">03</div>
+            <div class="roster-copy">
+              <strong>Nyantakyi Barima Agyapong</strong>
+              <span>Gamer tag: Beast</span>
+            </div>
+          </div>
+          <div class="roster-row">
+            <div class="roster-no">04</div>
+            <div class="roster-copy">
+              <strong>Emmanuel Lartey</strong>
+              <span>Gamer tag: Igris</span>
+            </div>
+          </div>
+          <div class="roster-row">
+            <div class="roster-no">05</div>
+            <div class="roster-copy">
+              <strong>Jesse-Linden Asare Joseph</strong>
+              <span>Roster name present in workbook; gamer tag not filled in the current sheet.</span>
+            </div>
+          </div>
+          <div class="roster-row">
+            <div class="roster-no">06</div>
+            <div class="roster-copy">
+              <strong>Emmanuel Kofi Danquah</strong>
+              <span>Gamer tag: Sunless</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
   <script type="module">
     import * as THREE from "https://unpkg.com/three@0.163.0/build/three.module.js";
