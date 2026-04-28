@@ -1092,10 +1092,18 @@
         --section-gap: 46px;
       }
 
+      body {
+        background:
+          linear-gradient(rgba(7, 10, 29, 0.9), rgba(7, 10, 29, 0.97)),
+          url("./assets/xtremex-images/cyber-themed-logo-man-holding-holographic-crest.jpeg") center top / cover,
+          url("./assets/xtremex-images/xtremex-esports-image-not-logo.jpeg") center top / cover;
+      }
+
       .topbar-inner {
         flex-direction: column;
         justify-content: center;
         padding: 12px 0;
+        gap: 14px;
       }
 
       .nav {
@@ -1106,6 +1114,10 @@
       .hero {
         min-height: 520px;
         padding: 64px 18px 58px;
+      }
+
+      .hero-mark h1 {
+        font-size: clamp(2.9rem, 18vw, 5.2rem);
       }
 
       .hero-triangle.left {
@@ -1121,6 +1133,7 @@
       .hero-subtitle {
         gap: 10px;
         letter-spacing: 0.13em;
+        flex-wrap: wrap;
       }
 
       .hero-actions {
@@ -1136,6 +1149,10 @@
         padding: 40px 16px;
       }
 
+      .feature-grid h2 {
+        font-size: clamp(1.9rem, 8vw, 3rem);
+      }
+
       .crest-group .badge {
         width: 110px;
       }
@@ -1146,6 +1163,13 @@
 
       .video-card {
         border-radius: 16px;
+      }
+
+      .video-overlay {
+        left: 12px;
+        bottom: 12px;
+        font-size: 0.74rem;
+        padding: 0.48rem 0.7rem;
       }
 
       .achievement-card {
@@ -1173,12 +1197,137 @@
 
       .footer-brand-head {
         align-items: flex-start;
+        flex-direction: column;
       }
     }
 
     @media (max-width: 520px) {
+      .container {
+        width: min(var(--content-width), calc(100% - 16px));
+      }
+
+      .page {
+        padding: 16px 0 64px;
+      }
+
+      .brand {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .brand-copy strong {
+        font-size: 0.88rem;
+      }
+
+      .brand-copy span {
+        font-size: 0.72rem;
+      }
+
+      .nav {
+        justify-content: center;
+        row-gap: 10px;
+        column-gap: 14px;
+        font-size: 0.8rem;
+      }
+
+      .hero {
+        min-height: 480px;
+        padding: 54px 14px 46px;
+      }
+
+      .hero-copy,
+      .section-title p,
+      .about-copy,
+      .footer p,
+      .footer-list a,
+      .footer-list div {
+        font-size: 0.92rem;
+      }
+
+      .section-title h2 {
+        font-size: clamp(1.5rem, 8vw, 2rem);
+      }
+
+      .brand-logo {
+        width: min(100%, 260px);
+      }
+
+      .video-frame {
+        aspect-ratio: 4 / 3;
+      }
+
+      .video-overlay {
+        display: none;
+      }
+
+      .badge-row {
+        gap: 10px;
+      }
+
+      .badge-pill {
+        width: 60px;
+        height: 60px;
+      }
+
+      .badge-pill img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .games-grid {
+        grid-auto-columns: minmax(158px, 1fr);
+        gap: 14px;
+        padding: 6px 4px 16px;
+      }
+
+      .game-card {
+        width: min(190px, 100%);
+      }
+
+      .game-card h3 {
+        font-size: 0.86rem;
+      }
+
+      .game-card p {
+        font-size: 0.78rem;
+      }
+
+      .partner-card {
+        min-height: 0;
+        padding: 18px 16px;
+      }
+
       .social-row {
         gap: 14px;
+      }
+
+      .footer {
+        padding: 56px 16px;
+      }
+
+      .footer-brand-head img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .footer h2 {
+        font-size: 1.35rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-subtitle::before,
+      .hero-subtitle::after {
+        display: none;
+      }
+
+      .games-grid {
+        grid-auto-columns: minmax(146px, 1fr);
+      }
+
+      .game-card {
+        width: min(172px, 100%);
       }
     }
   </style>
