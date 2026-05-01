@@ -191,6 +191,7 @@
       color: #f0f4ff;
     }
     .roster-row {
+      position: relative;
       display: grid;
       grid-template-columns: 56px 88px 1fr;
       gap: 14px;
@@ -199,6 +200,278 @@
       border-radius: 18px;
       padding: 14px;
       background: rgba(6, 10, 27, 0.32);
+    }
+    .captain-row {
+      overflow: hidden;
+      border-color: rgba(243, 196, 109, 0.72);
+      background:
+        linear-gradient(135deg, rgba(243, 196, 109, 0.16), rgba(6, 10, 27, 0.5) 42%, rgba(233, 30, 99, 0.1)),
+        rgba(6, 10, 27, 0.42);
+      box-shadow:
+        0 0 0 1px rgba(243, 196, 109, 0.26),
+        0 20px 52px rgba(243, 196, 109, 0.12),
+        0 18px 44px rgba(0, 0, 0, 0.24);
+    }
+    .captain-row::before {
+      content: "";
+      position: absolute;
+      inset: -45%;
+      background:
+        conic-gradient(
+          from 0deg,
+          transparent 0deg,
+          rgba(243, 196, 109, 0.22) 42deg,
+          rgba(255, 232, 155, 0.95) 70deg,
+          rgba(243, 196, 109, 0.2) 104deg,
+          transparent 138deg,
+          transparent 180deg,
+          rgba(255, 214, 112, 0.85) 224deg,
+          rgba(243, 196, 109, 0.18) 260deg,
+          transparent 310deg
+        );
+      animation: captain-border-flow 5s linear infinite;
+      opacity: 0.82;
+      pointer-events: none;
+    }
+    .captain-row::after {
+      content: "";
+      position: absolute;
+      inset: 3px;
+      border-radius: 15px;
+      background:
+        linear-gradient(135deg, rgba(28, 22, 9, 0.9), rgba(6, 10, 27, 0.88) 44%, rgba(25, 13, 32, 0.82)),
+        radial-gradient(circle at 84% 12%, rgba(255, 220, 128, 0.2), transparent 28%);
+      pointer-events: none;
+    }
+    .captain-row > * {
+      position: relative;
+      z-index: 1;
+    }
+    .captain-row .roster-no {
+      background: linear-gradient(180deg, rgba(255, 224, 139, 0.28), rgba(106, 76, 20, 0.38));
+      border: 1px solid rgba(255, 220, 128, 0.46);
+      color: #fff3c1;
+    }
+    .captain-row .roster-photo {
+      border-color: rgba(255, 220, 128, 0.7);
+      box-shadow:
+        0 0 0 2px rgba(243, 196, 109, 0.24),
+        0 0 34px rgba(243, 196, 109, 0.24),
+        0 14px 30px rgba(0, 0, 0, 0.3);
+    }
+    .captain-photo-wrap {
+      position: relative;
+      width: 104px;
+      display: grid;
+      place-items: center;
+      padding-top: 18px;
+    }
+    .captain-photo-wrap .roster-photo {
+      position: relative;
+      z-index: 2;
+      width: 96px;
+      height: 96px;
+      border-radius: 24px;
+      border: 2px solid rgba(255, 221, 122, 0.95);
+      background:
+        linear-gradient(135deg, rgba(255, 244, 189, 0.34), rgba(229, 124, 16, 0.18)),
+        rgba(255, 255, 255, 0.04);
+      box-shadow:
+        0 0 0 3px rgba(154, 70, 0, 0.42),
+        0 0 24px rgba(255, 174, 43, 0.7),
+        0 0 52px rgba(255, 76, 22, 0.5),
+        0 18px 34px rgba(0, 0, 0, 0.42);
+    }
+    .captain-photo-wrap .roster-photo::before,
+    .captain-photo-wrap .roster-photo::after {
+      content: "";
+      position: absolute;
+      inset: -10px;
+      border-radius: 30px;
+      background:
+        conic-gradient(
+          from 18deg,
+          rgba(255, 238, 155, 0),
+          rgba(255, 238, 155, 0.95),
+          rgba(255, 110, 0, 0.9),
+          rgba(255, 39, 16, 0.5),
+          rgba(255, 238, 155, 0)
+        );
+      animation: captain-photo-fire 1.65s linear infinite;
+      z-index: -1;
+    }
+    .captain-photo-wrap .roster-photo::after {
+      inset: -17px;
+      filter: blur(10px);
+      opacity: 0.74;
+      animation-duration: 2.3s;
+      animation-direction: reverse;
+    }
+    .fire-lion {
+      position: absolute;
+      top: -36px;
+      left: 50%;
+      z-index: 4;
+      width: 142px;
+      height: 64px;
+      transform: translateX(-50%) translateY(13px) rotate(-2deg) scale(0.92);
+      background:
+        url("./team-players-images/captain-fire-lion.svg") center bottom / contain no-repeat,
+        radial-gradient(ellipse at 50% 70%, rgba(255, 185, 64, 0.68), rgba(255, 83, 20, 0.2) 48%, transparent 72%);
+      filter:
+        drop-shadow(0 12px 18px rgba(255, 128, 24, 0.42))
+        drop-shadow(0 0 20px rgba(255, 77, 18, 0.34));
+      animation: fire-lion-rise 3s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .fire-lion::before {
+      content: "";
+      position: absolute;
+      inset: auto 11px 8px;
+      height: 32px;
+      border-radius: 999px;
+      background:
+        radial-gradient(ellipse at 16% 60%, rgba(255, 229, 139, 0.82), transparent 28%),
+        radial-gradient(ellipse at 54% 34%, rgba(255, 108, 22, 0.72), transparent 42%),
+        linear-gradient(90deg, rgba(80, 28, 5, 0.14), rgba(255, 157, 44, 0.56), rgba(255, 66, 15, 0.18));
+      filter: blur(1px);
+      animation: resting-flame-pulse 3s ease-in-out infinite;
+    }
+    .fire-lion::after {
+      content: "";
+      position: absolute;
+      inset: -8px -4px 0;
+      background:
+        radial-gradient(ellipse at 50% 20%, rgba(255, 238, 155, 0.74), transparent 22%),
+        radial-gradient(ellipse at 20% 62%, rgba(255, 87, 18, 0.58), transparent 34%),
+        radial-gradient(ellipse at 78% 58%, rgba(255, 135, 22, 0.54), transparent 36%),
+        linear-gradient(110deg, transparent 0 20%, rgba(255, 192, 72, 0.28), transparent 72%);
+      mix-blend-mode: screen;
+      filter: blur(4px);
+      animation: lion-mane-flare 3s ease-in-out infinite;
+    }
+    .fire-breath {
+      position: absolute;
+      top: 32px;
+      right: -78px;
+      z-index: 3;
+      width: 112px;
+      height: 38px;
+      border-radius: 999px 8px 8px 999px / 999px 18px 18px 999px;
+      background:
+        radial-gradient(circle at 84% 44%, rgba(255, 246, 176, 0.98), transparent 17%),
+        radial-gradient(circle at 58% 50%, rgba(255, 126, 18, 0.95), transparent 38%),
+        radial-gradient(circle at 32% 54%, rgba(255, 223, 112, 0.88), transparent 34%),
+        linear-gradient(90deg, rgba(255, 232, 134, 0.95), rgba(255, 89, 18, 0.84), rgba(255, 74, 20, 0));
+      filter: blur(0.4px) drop-shadow(0 0 18px rgba(255, 88, 22, 0.82));
+      transform-origin: left center;
+      animation: lion-fire-breath 3s ease-in-out infinite;
+      opacity: 0;
+      pointer-events: none;
+    }
+    @keyframes captain-photo-fire {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes lion-mane-flare {
+      0%,
+      100% {
+        opacity: 0.46;
+        transform: scale(0.9);
+      }
+      34%,
+      58% {
+        opacity: 1;
+        transform: scale(1.08);
+      }
+    }
+    @keyframes resting-flame-pulse {
+      0%,
+      100% {
+        opacity: 0.48;
+        transform: scaleX(0.92);
+      }
+      36%,
+      62% {
+        opacity: 0.92;
+        transform: scaleX(1.03);
+      }
+    }
+    @keyframes fire-lion-rise {
+      0%,
+      24%,
+      100% {
+        transform: translateX(-50%) translateY(13px) rotate(-2deg) scale(0.92);
+      }
+      34%,
+      68% {
+        transform: translateX(-50%) translateY(-3px) rotate(1deg) scale(1.02);
+      }
+      78% {
+        transform: translateX(-50%) translateY(7px) rotate(-2deg) scale(0.96);
+      }
+    }
+    @keyframes lion-fire-breath {
+      0%,
+      44%,
+      100% {
+        opacity: 0;
+        transform: scaleX(0.12) scaleY(0.7);
+      }
+      51% {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1);
+      }
+      60% {
+        opacity: 0.88;
+        transform: scaleX(1.2) scaleY(1.08);
+      }
+      72% {
+        opacity: 0;
+        transform: scaleX(0.35) scaleY(0.82);
+      }
+    }
+    .captain-row .roster-copy {
+      padding-right: 88px;
+    }
+    .captain-crown {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      z-index: 2;
+      width: 74px;
+      height: 48px;
+      display: grid;
+      place-items: end center;
+      filter: drop-shadow(0 12px 20px rgba(243, 196, 109, 0.28));
+    }
+    .captain-crown::before {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      width: 58px;
+      height: 22px;
+      background: linear-gradient(180deg, #fff0b8, #f3c46d 58%, #9d6c15);
+      clip-path: polygon(0 100%, 7% 34%, 28% 62%, 50% 0, 72% 62%, 93% 34%, 100% 100%);
+    }
+    .captain-crown::after {
+      content: "";
+      width: 64px;
+      height: 12px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ffeeb5, #c88a22);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      box-shadow: inset 0 -3px 8px rgba(78, 46, 8, 0.34);
+    }
+    .captain-title {
+      color: #ffe59d;
+      text-shadow: 0 0 18px rgba(243, 196, 109, 0.34);
+    }
+    @keyframes captain-border-flow {
+      to {
+        transform: rotate(360deg);
+      }
     }
     .roster-no {
       width: 56px;
@@ -268,10 +541,55 @@
       .roster-row {
         grid-template-columns: 1fr;
       }
+      .captain-crown {
+        top: 12px;
+        right: 12px;
+        width: 58px;
+        height: 40px;
+      }
+      .captain-crown::before {
+        width: 46px;
+        height: 18px;
+      }
+      .captain-crown::after {
+        width: 50px;
+        height: 10px;
+      }
+      .captain-row .roster-copy {
+        padding-right: 64px;
+      }
+      .captain-photo-wrap {
+        width: 132px;
+        justify-items: start;
+      }
+      .fire-lion {
+        left: 66px;
+        width: 126px;
+        height: 58px;
+      }
+      .fire-breath {
+        right: -62px;
+        width: 88px;
+      }
       .roster-photo {
         width: 100%;
         max-width: 120px;
         height: 120px;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .captain-row::before,
+      .captain-photo-wrap .roster-photo::before,
+      .captain-photo-wrap .roster-photo::after,
+      .fire-lion::after,
+      .fire-lion,
+      .fire-lion::before,
+      .fire-breath {
+        animation: none;
+      }
+      .fire-breath {
+        opacity: 0.72;
+        transform: scaleX(0.72);
       }
     }
   </style>
@@ -370,20 +688,28 @@
         <div class="roster-grid">
           <div class="roster-section">
             <h3 class="roster-heading">Main Team</h3>
-            <div class="roster-row">
+            <div class="roster-row captain-row">
+              <div class="captain-crown" aria-label="Team Captain Crown"></div>
               <div class="roster-no">01</div>
-              <div class="roster-photo placeholder" aria-hidden="true">No Photo</div>
+              <div class="captain-photo-wrap">
+                <div class="fire-lion" aria-hidden="true">
+                  <span class="fire-breath"></span>
+                </div>
+                <div class="roster-photo">
+                  <img src="./team-players-images/sunless.jpeg" alt="Emmanuel Kofi Danquah, Sunless">
+                </div>
+              </div>
               <div class="roster-copy">
                 <strong>Emmanuel Kofi Danquah</strong>
                 <span>Gamer tag: Sunless</span>
                 <span>Role: Roam</span>
-                <em>Team Captain</em>
+                <em class="captain-title">Team Captain</em>
               </div>
             </div>
             <div class="roster-row">
               <div class="roster-no">02</div>
               <div class="roster-photo">
-                <img src="./team-players-images/Bright(Already Pro).jpeg" alt="Bright Bosu Appiah">
+                <img src="./team-players-images/alreadypro.jpeg" alt="Bright Bosu Appiah, AlreadyPro">
               </div>
               <div class="roster-copy">
                 <strong>Bright Bosu Appiah</strong>
@@ -393,7 +719,9 @@
             </div>
             <div class="roster-row">
               <div class="roster-no">03</div>
-              <div class="roster-photo placeholder" aria-hidden="true">No Photo</div>
+              <div class="roster-photo">
+                <img src="./team-players-images/gogo.jpeg" alt="Aaron Gogo Ashirifi, Gogo">
+              </div>
               <div class="roster-copy">
                 <strong>Aaron Gogo Ashirifi</strong>
                 <span>Gamer tag: Gogo</span>
@@ -402,7 +730,9 @@
             </div>
             <div class="roster-row">
               <div class="roster-no">04</div>
-              <div class="roster-photo placeholder" aria-hidden="true">No Photo</div>
+              <div class="roster-photo">
+                <img src="./team-players-images/igris.jpeg" alt="Emmanuel Lartey, Igris">
+              </div>
               <div class="roster-copy">
                 <strong>Emmanuel Lartey</strong>
                 <span>Gamer tag: Igris</span>
@@ -411,7 +741,9 @@
             </div>
             <div class="roster-row">
               <div class="roster-no">05</div>
-              <div class="roster-photo placeholder" aria-hidden="true">No Photo</div>
+              <div class="roster-photo">
+                <img src="./team-players-images/beast.jpeg" alt="Nyantakyi Barima Agyapong, Beast">
+              </div>
               <div class="roster-copy">
                 <strong>Nyantakyi Barima Agyapong</strong>
                 <span>Gamer tag: Beast</span>
@@ -427,7 +759,18 @@
               <div class="roster-photo placeholder" aria-hidden="true">No Photo</div>
               <div class="roster-copy">
                 <strong>Jesse-Linden Asare Joseph</strong>
-                <span>Role: Sub Roam</span>
+                <span>Role: Roam</span>
+              </div>
+            </div>
+            <div class="roster-row">
+              <div class="roster-no">S2</div>
+              <div class="roster-photo">
+                <img src="./team-players-images/beserker.jpeg" alt="Leroy, Beserker">
+              </div>
+              <div class="roster-copy">
+                <strong>Leroy</strong>
+                <span>Gamer tag: Beserker</span>
+                <span>Role: EXP</span>
               </div>
             </div>
           </div>
