@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 230" role="img" aria-label="Fire lion resting">
+  <defs>
+    <radialGradient id="emberGlow" cx="35%" cy="42%" r="70%">
+      <stop offset="0" stop-color="#fff2b4"/>
+      <stop offset="0.28" stop-color="#ffbd38"/>
+      <stop offset="0.54" stop-color="#df5c16"/>
+      <stop offset="0.78" stop-color="#7d2708"/>
+      <stop offset="1" stop-color="#1c0802" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="furFire" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff0ad"/>
+      <stop offset="0.24" stop-color="#f4a735"/>
+      <stop offset="0.52" stop-color="#b94d13"/>
+      <stop offset="1" stop-color="#381006"/>
+    </linearGradient>
+    <linearGradient id="deepFur" x1="0" x2="1">
+      <stop offset="0" stop-color="#411407"/>
+      <stop offset="0.45" stop-color="#a94512"/>
+      <stop offset="1" stop-color="#f2b94a"/>
+    </linearGradient>
+    <filter id="hotGlow" x="-30%" y="-45%" width="170%" height="190%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 1  0 0.55 0 0 0.35  0 0 0.12 0 0  0 0 0 0.75 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g opacity="0.9" filter="url(#hotGlow)">
+    <path d="M63 143c47-43 87-63 136-65 58-3 118 19 183 11 47-6 70-28 98-54-14 45-42 84-90 103-42 17-107 15-165 8-63-8-106 1-162 34 13-16 13-24 0-37z" fill="url(#emberGlow)" opacity="0.52"/>
+    <path d="M95 143c33-42 80-73 139-80 47-6 91 8 126 27 38 20 75 20 119 2-23 35-61 59-112 70-56 12-113 1-164-6-48-7-83 0-132 26 5-14 13-27 24-39z" fill="url(#furFire)"/>
+    <path d="M151 150c38-18 83-25 134-20 44 4 86 8 127-3-18 24-56 40-104 43-50 4-105-6-157-20z" fill="#441407" opacity="0.58"/>
+  </g>
+
+  <g filter="url(#hotGlow)">
+    <path d="M30 132c11-23 32-47 60-61 36-18 75-16 102 1 17 11 27 26 30 44-10-11-25-17-43-18 12 13 19 28 20 45-19-23-44-31-78-28-34 3-61 15-91 17z" fill="url(#furFire)"/>
+    <path d="M59 118c19-30 45-44 77-44 23 0 44 9 56 25-30-9-62 0-97 24-12 8-26 12-36-5z" fill="#ffbe46" opacity="0.65"/>
+    <path d="M45 130c-12-17-18-38-13-61 9 21 28 29 48 38-10 10-21 18-35 23z" fill="#b84210"/>
+    <path d="M83 76c15-32 39-50 71-59-9 24-4 44 12 63-29-12-55-13-83-4z" fill="#f29825"/>
+    <path d="M127 57c21-27 51-38 88-41-17 25-20 49-8 72-28-17-54-27-80-31z" fill="#d85b16"/>
+    <path d="M186 77c25-25 57-36 101-38-22 21-28 43-18 65-29-14-56-23-83-27z" fill="#f2a735"/>
+  </g>
+
+  <g filter="url(#hotGlow)">
+    <path d="M21 127c20-17 51-24 89-20 28 3 54 11 78 24-17 16-40 26-69 28-41 3-75-9-98-32z" fill="url(#deepFur)"/>
+    <path d="M27 126c22-25 57-39 94-37 34 2 61 16 74 40-30-12-61-12-92 1-29 13-55 12-76-4z" fill="url(#furFire)"/>
+    <path d="M12 123c9-18 31-30 67-36-18 22-18 41 0 59-28-1-50-9-67-23z" fill="#2b0b05"/>
+    <path d="M22 119c26-4 50-14 71-29 30-20 57-21 82-2-24 4-42 15-54 32-26 6-62 8-99-1z" fill="#c75415"/>
+    <path d="M37 131c29 7 56 3 83-11 22-12 43-12 65-1-21 18-50 28-87 28-25 0-45-5-61-16z" fill="#5b1908" opacity="0.72"/>
+  </g>
+
+  <g filter="url(#hotGlow)">
+    <path d="M4 123c22-31 55-45 98-43 37 1 66 16 83 42-29-19-63-18-101 2-36 18-62 18-80-1z" fill="#160702"/>
+    <path d="M25 112c18-18 43-28 76-28 31 0 55 11 71 32-26-10-53-7-79 9-28 16-51 12-68-13z" fill="#8d2e0d"/>
+    <path d="M12 124c27 11 53 9 78-5 28-16 56-20 83-11-29 26-67 38-112 35-25-2-42-8-49-19z" fill="#2f0e05"/>
+  </g>
+
+  <g>
+    <path d="M30 111c-3-20 7-39 29-57 6 21 3 42-10 63z" fill="#f2a030"/>
+    <path d="M145 85c29-19 58-23 89-12-23 8-34 22-33 43-18-16-37-26-56-31z" fill="#ffbf4a"/>
+    <path d="M177 100c33-13 66-11 99 5-27 2-46 12-58 31-14-16-28-28-41-36z" fill="#df5a16"/>
+  </g>
+
+  <g>
+    <path d="M49 115c13-20 34-31 61-32 30-1 54 11 71 34-26-12-51-9-76 8-20 13-39 10-56-10z" fill="#7b240b"/>
+    <path d="M79 96c19-8 39-7 59 4-17 5-29 15-37 29-13-4-20-14-22-33z" fill="#e88922"/>
+    <path d="M45 124c21 8 43 6 66-5 25-13 48-14 70-2-25 21-55 31-91 29-22-1-37-8-45-22z" fill="#391005"/>
+    <ellipse cx="100" cy="111" rx="7" ry="5" fill="#fff3ad"/>
+    <ellipse cx="101" cy="111" rx="3" ry="5" fill="#190702"/>
+    <path d="M48 129c15 1 27 6 37 15-17 0-31-5-43-14z" fill="#f6d17a"/>
+    <path d="M17 124c17-11 34-15 51-11-11 12-27 18-51 11z" fill="#100603"/>
+    <path d="M4 125c21-6 36-10 45-14-7 14-21 22-42 23z" fill="#050201"/>
+    <path d="M25 135c15 6 34 7 55 2-17 15-34 18-51 9z" fill="#140703"/>
+    <path d="M31 138c6 8 15 14 27 18-15 3-25-3-30-17z" fill="#f6cf75"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M210 92c38-39 83-58 135-57-24 21-35 45-34 72-31-11-64-16-101-15z" fill="#c84a12"/>
+    <path d="M276 91c42-33 86-42 132-28-31 13-49 35-55 65-26-17-52-29-77-37z" fill="#ff9e28"/>
+    <path d="M344 93c46-23 87-24 124-2-33 6-57 25-72 56-14-25-31-43-52-54z" fill="#b5380f"/>
+    <path d="M398 107c43-11 80-4 111 23-33-1-59 11-79 36-6-25-17-45-32-59z" fill="#ed7e1c"/>
+  </g>
+
+  <g opacity="0.68" filter="url(#hotGlow)">
+    <path d="M109 50c-13-18-12-34 2-50 2 23 13 36 34 39-13 2-25 5-36 11z" fill="#ffd76b"/>
+    <path d="M249 63c-9-24 0-45 27-63-5 28 6 47 33 56-22-1-42 1-60 7z" fill="#ffb13a"/>
+    <path d="M382 87c8-28 29-48 62-61-15 26-11 47 13 64-25-5-50-6-75-3z" fill="#ff7b1c"/>
+  </g>
+</svg>
