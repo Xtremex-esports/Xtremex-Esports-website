@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xtremex-esports.github.io/Xtremex-Esports-website/sitemap.xml
